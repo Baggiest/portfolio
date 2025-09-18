@@ -6,6 +6,9 @@ export default defineConfig({
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	},
+	build: {
+		outDir: 'public' 
+	},
 	server:{
 		port:3000,
 	}
