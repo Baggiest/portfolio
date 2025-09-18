@@ -7,35 +7,36 @@
 	import yc_logo from '$lib/assets/yc.svg';
 	import oishimarket_png from '$lib/assets/oishi.png';
 
-	// timestamp of december 15th 2004
-	let birthday = 1103106600;
+	// timestamp of december 14th 2004
+	let birthday = 1103023247;
 
-	// get timestamp of now
-	$: timestamp = Date.now();
+	// current time in ms; updated via rAF for smooth updates
+	let currentTimeInMs = Date.now();
 
-	// my age in amount of seconds
-	$: age = timestamp / 1000 - birthday;
+	// my age in seconds (reacts to currentTimeInMs)
+	$: ageSeconds = currentTimeInMs / 1000 - birthday;
+	$: ageMinutes = ageSeconds / 60;
+	$: wholeMinutes = Math.floor(ageMinutes);
+	$: fractional = Math.floor((ageMinutes - wholeMinutes) * 100);
 
 	onMount(() => {
-		const interval = setInterval(() => {
-			timestamp = Date.now();
-			age = timestamp / 1000 - birthday;
-		}, 1000);
-
-		return () => {
-			clearInterval(interval);
+		let raf = 0;
+		const tick = () => {
+			currentTimeInMs = Date.now();
+			raf = requestAnimationFrame(tick);
 		};
+		raf = requestAnimationFrame(tick);
+		return () => cancelAnimationFrame(raf);
 	});
 </script>
 
 <div class="flex h-auto justify-center pt-16 text-[#2a2e58]">
 	<div class="h-[500px] w-1/3 min-w-[330px]">
-		<h1 class="p-4 text-5xl font-extrabold tracking-tight text-[#d42b41]">Hey I'm Mani Sohi ツ</h1>
+		<h1 class="p-4 text-5xl font-extrabold tracking-tight text-primary">Hey I'm Mani Sohi ツ</h1>
 
 		<p class="p-5 text-xl font-bold leading-tight max-sm:text-center">
-			I'm a {format(Math.floor(age / 60))}
-			minutes old software engineer who likes to learn and solve problems usually around people<br
-			/>
+			I'm a {format(wholeMinutes)}<span class="tabular-nums text-primary">.{String(fractional).padStart(2, '0')}</span>
+			minutes old software engineer who likes to learn and solve problems usually around people<br />
 			I do professional backend engineering with some frontend tendencies mostly because I have to
 		</p>
 

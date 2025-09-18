@@ -5,7 +5,13 @@ export default {
     fontFamily: {
       rampart: ["'Rampart One', sans-serif"],
     },
-    extend: {},
+    extend: {
+			colors: {
+				'primary': '#d42b41', // hot red
+				'secondary': '#2a2e58', // the dark blue
+				'peach': '#FFCBA5', // cream background
+			}
+		}
   },
   plugins: [],
 }
