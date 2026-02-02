@@ -37,7 +37,7 @@
 		</h1>
 		<div class="">
 			<p
-				class="mr-auto max-w-[400px] pl-4‍‍ pb-4 pt-4 text-left text-xl font-bold leading-tight"
+				class="mr-auto max-w-[400px] pl-4 pb-4 pt-4 text-left text-xl font-bold leading-tight"
 			>
 				I'm a <span class="">{format(wholeMinutes)}</span><span
 					class="tabular-nums text-primary">.{String(fractional).padStart(2, '0')}</span
