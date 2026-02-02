@@ -30,29 +30,36 @@
 	});
 </script>
 
-<div class="flex h-auto justify-center pt-16 text-[#2a2e58]">
+<div class="flex h-auto justify-center pt-8 text-[#2a2e58]">
 	<div class="h-[500px] w-1/3 min-w-[330px]">
-		<h1 class="p-4 text-5xl font-extrabold tracking-tight text-primary">Hey I'm Mani Sohi ツ</h1>
+		<h1 class="pl-4 mb-0 pb-0 pt-4 text-left text-[2.8rem] font-extrabold tracking-tight text-blue-950">
+			Hey I'm <span class="text-nowrap text-primary">Mani E. Sohi </span>ツ
+		</h1>
+		<div class="">
+			<p
+				class="mr-auto max-w-[400px] pl-4‍‍ pb-4 pt-4 text-left text-xl font-bold leading-tight"
+			>
+				I'm a <span class="">{format(wholeMinutes)}</span><span
+					class="tabular-nums text-primary">.{String(fractional).padStart(2, '0')}</span
+				>
+				minutes old product engineer working on the intersection of human-AI interaction, systems engineering,
+				and execution.<br />
+			</p>
 
-		<p class="p-5 text-xl font-bold leading-tight max-sm:text-center">
-			I'm a {format(wholeMinutes)}<span class="tabular-nums text-primary">.{String(fractional).padStart(2, '0')}</span>
-			minutes old software engineer who likes to learn and solve problems usually around people<br />
-			I do professional backend engineering with some frontend tendencies mostly because I have to
-		</p>
-
-		<div class="flex justify-center gap-6 p-4 pt-8 max-sm:justify-center">
-			<a href="https://github.com/baggiest">
-				<img height="30" width="30" src={github_logo} alt="Github" />
-			</a>
-			<a href="https://www.linkedin.com/in/manisohi/">
-				<img height="30" width="30" src={linkedin_logo} alt="LinkedIn" />
-			</a>
-			<a href="https://x.com/manisohi">
-				<img height="30" width="30" src={x_logo} alt="X" />
-			</a>
-			<a href="https://news.ycombinator.com/user?id=Baggie">
-				<img height="30" width="30" src={yc_logo} alt="hackernews" />
-			</a>
+			<div class="flex justify-center gap-x-8 gap-y-0 pr-5 pt-4 items-baseline">
+				<a href="https://github.com/baggiest">
+					<img height="40" width="40" src={github_logo} class="ml-0" alt="Github" />
+				</a>
+				<a href="https://www.linkedin.com/in/manisohi/">
+					<img height="40" width="40" src={linkedin_logo} alt="LinkedIn" />
+				</a>
+				<a href="https://x.com/manisohi">
+					<img height="40" width="40" src={x_logo} alt="X" />
+				</a>
+				<a href="https://news.ycombinator.com/user?id=Baggie">
+					<img height="40" width="40" src={yc_logo} alt="hackernews" />
+				</a>
+			</div>
 		</div>
 		<!-- <p class="font-rampart text-4xl ">タイドポッドは美味しいですよ :3</p> -->
 
