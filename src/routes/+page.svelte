@@ -30,6 +30,10 @@
 	});
 </script>
 
+<svelte:head>
+    <title>Mani E. Sohi</title> 
+</svelte:head>
+
 <div class="flex h-auto justify-center pt-8 text-[#2a2e58]">
 	<div class="h-[500px] w-1/3 min-w-[330px]">
 		<h1 class="pl-4 mb-0 pb-0 pt-4 text-left text-[2.8rem] font-extrabold tracking-tight text-blue-950">
