@@ -1,6 +1,6 @@
 ---
 title: First Blog
-description: Finally made this section 
+description: Hello worlders :3 
 date: '2025-09-18'
 categories:
   - sveltekit
@@ -9,7 +9,3 @@ published: true
 ---
 
 ## Markdown
-
-Hey hey
-
-The only time cursor was helpful cause honestly I was too lazy to build this section
