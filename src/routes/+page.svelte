@@ -40,7 +40,7 @@
 		<div>
 			<section class="mb-10">
 				<h1 class="text-[2.8rem] font-extrabold leading-tight tracking-tight text-blue-950">
-					Hey I'm <span class="text-nowrap text-primary">Mani E. Sohi </span>ツ
+					Hey I'm <span class="text-nowrap text-primary">Mani E. Sohi </span>
 				</h1>
 				<p class="mt-4 max-w-lg text-xl font-bold leading-snug">
 					I'm a <span>{format(wholeMinutes)}</span><span class="tabular-nums text-primary"
@@ -73,21 +73,21 @@
 			<section class="space-y-6">
 				<h2 class="text-lg font-bold uppercase tracking-wide text-blue-950">What I do</h2>
 				<p class="leading-relaxed text-secondary">
-					I currently work on <strong class="text-blue-950">human-AI interaction</strong> engineering with emphasis on product engineering, and execution.
-					My work ethic is high-agency and rapid-development, like that one squirrel from "over the hedge".
+					I currently work on <strong class="text-blue-950">cool shit</strong> with emphasis on making real products, no wordcel filler slop.
+					My work ethic is super pragmatic.
 					
 				</p>
 				<div class="pt-2">
 					<p class="mb-2 text-sm text-secondary/70">Focus areas:</p>
 					<ul class="space-y-1 text-sm text-secondary/80">
-						<li>· End to end product engineering, design and delivery (5+ yoe)</li>
+						<li>· End to end product engineering, design and delivery (6+ yoe)</li>
 						<li>· Lean hardware design & manufacturing</li>
-						<li>· Figuring out human-centric AI systems</li>
+						<li>· Collecting copper and aluminium to melt into bars</li>
 						<li>· Getting my 1992 carburated lancer to start in the morning</li>
 					</ul>
 				</div>
 				<p class="pt-2 text-sm text-secondary/80">
-					Based in Tehran. Open to collaboration and conversation—<a
+					Based in Tehran. Open to meeting other makers—<a
 						href="https://www.linkedin.com/in/manisohi/"
 						class="font-medium text-primary hover:underline">get in touch</a
 					>.
