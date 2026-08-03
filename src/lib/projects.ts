@@ -24,7 +24,7 @@ export const projects: Project[] = [
 	{
 		name: 'pelak',
 		description: 'Viral meme project people in Iran use to find which city any car comes from so they can judge them',
-		url: 'https://pelak.lol',
+		url: 'pelak.vercel.app',
 		tags: ['TypeScript'],
 		featured: true
 	},
