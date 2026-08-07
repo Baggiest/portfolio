@@ -5,13 +5,13 @@ export default {
 
 	theme: {
 		fontFamily: {
-			rampart: ["'Rampart One', sans-serif"],
+			rampart: ["'Rampart One', sans-serif"]
 		},
 		extend: {
 			colors: {
-				'primary': '#d42b41', // hot red
-				'secondary': '#2a2e58', // the dark blue
-				'tertiary': '#FFCBA5', // cream background
+				primary: '#d42b41', // hot red
+				secondary: '#2a2e58', // the dark blue
+				tertiary: '#FFCBA5' // cream background
 			}
 		}
 	},

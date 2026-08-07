@@ -6,6 +6,7 @@
 	import linkedin_logo from '$lib/assets/linkedin.svg';
 	import yc_logo from '$lib/assets/yc.svg';
 	import { projects } from '$lib/projects';
+	import Window from '$lib/components/Window.svelte';
 
 	export let data: {
 		posts: Array<{ title: string; slug: string; description: string; date: string }>;
@@ -35,119 +36,112 @@
 <svelte:head>
 	<title>Mani E. Sohi</title>
 </svelte:head>
-<div class="pb-16 text-[#2a2e58]">
-	<div class="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_280px] lg:gap-16">
-		<div>
-			<section class="mb-10">
-				<h1 class="text-[2.8rem] font-extrabold leading-tight tracking-tight text-blue-950">
-					Hey I'm <span class="text-nowrap text-primary">Mani E. Sohi </span>
-				</h1>
-				<p class="mt-4 max-w-lg text-xl font-bold leading-snug">
-					I'm a <span>{format(wholeMinutes)}</span><span class="tabular-nums text-primary"
-						>.{String(fractional).padStart(2, '0')}</span
-					>
-					minutes old product engineer and former mechanic.
-				</p>
-				<div class="mt-6 flex items-center gap-6">
-					<a href="https://github.com/baggiest" class="opacity-70 transition hover:opacity-100">
-						<img height="28" width="28" src={github_logo} alt="Github" />
-					</a>
-					<a
-						href="https://www.linkedin.com/in/manisohi/"
-						class="opacity-70 transition hover:opacity-100"
-					>
-						<img height="28" width="28" src={linkedin_logo} alt="LinkedIn" />
-					</a>
-					<a href="https://x.com/manisohi" class="opacity-70 transition hover:opacity-100">
-						<img height="28" width="28" src={x_logo} alt="X" />
-					</a>
-					<a
-						href="https://news.ycombinator.com/user?id=Baggie"
-						class="opacity-70 transition hover:opacity-100"
-					>
-						<img height="28" width="28" src={yc_logo} alt="hackernews" />
-					</a>
-				</div>
-			</section>
 
-			<section class="space-y-6">
-				<h2 class="text-lg font-bold uppercase tracking-wide text-blue-950">What I do</h2>
-				<p class="leading-relaxed text-secondary">
-					I currently work on <strong class="text-blue-950">cool shit</strong> with emphasis on making real products, no wordcel filler slop.
-					My work ethic is super pragmatic.
-					
-				</p>
-				<div class="pt-2">
-					<p class="mb-2 text-sm text-secondary/70">Focus areas:</p>
-					<ul class="space-y-1 text-sm text-secondary/80">
-						<li>· End to end product engineering, design and delivery (6+ yoe)</li>
-						<li>· Lean hardware design & manufacturing</li>
-						<li>· Collecting copper and aluminium to melt into bars</li>
-						<li>· Getting my 1992 carburated lancer to start in the morning</li>
-					</ul>
-				</div>
-				<p class="pt-2 text-sm text-secondary/80">
-					Based in Tehran. Open to meeting other makers—<a
-						href="https://www.linkedin.com/in/manisohi/"
-						class="font-medium text-primary hover:underline">get in touch</a
-					>.
-				</p>
-			</section>
-		</div>
+<div class="grid grid-cols-1 gap-3 md:grid-cols-[1fr_280px]">
+	<div class="min-w-0">
+		<Window title="My Computer — Mani E. Sohi">
+			<h1 class="text-xl font-bold leading-tight sm:text-2xl">
+				Hey, I'm <span class="text-[#000080]">Mani E. Sohi</span>
+			</h1>
+			<p class="mt-2">
+				I'm a <span class="font-bold tabular-nums">{format(wholeMinutes)}</span><span
+					class="text-[#000080]">.{String(fractional).padStart(2, '0')}</span
+				> minutes old product engineer and former mechanic.
+			</p>
 
-		<aside class="space-y-10 lg:pt-4">
-			<div>
-				<h2 class="mb-3 text-lg font-bold uppercase tracking-wide text-blue-950">Writing</h2>
-				{#if posts.length === 0}
-					<p class="text-sm text-secondary/60">No posts yet.</p>
-				{:else}
-					<ul class="space-y-3">
-						{#each posts as post}
-							<li class="group">
-								<a class="block" href={`/blog/${post.slug}`}>
-									<h3
-										class="text-sm font-semibold text-secondary transition group-hover:text-primary"
-									>
-										{post.title}
-									</h3>
-									<p class="text-xs text-secondary/60">{post.description}</p>
-								</a>
-							</li>
-						{/each}
-					</ul>
-					<a
-						href="/blog"
-						class="mt-4 inline-block text-sm font-semibold text-primary hover:underline"
-						>All posts →</a
-					>
-				{/if}
+			<div class="mt-4 flex flex-wrap items-center gap-4">
+				<a
+					href="https://github.com/baggiest"
+					class="opacity-80 transition hover:opacity-100"
+					aria-label="GitHub"
+				>
+					<img height="24" width="24" src={github_logo} alt="GitHub" />
+				</a>
+				<a
+					href="https://www.linkedin.com/in/manisohi/"
+					class="opacity-80 transition hover:opacity-100"
+					aria-label="LinkedIn"
+				>
+					<img height="24" width="24" src={linkedin_logo} alt="LinkedIn" />
+				</a>
+				<a
+					href="https://x.com/manisohi"
+					class="opacity-80 transition hover:opacity-100"
+					aria-label="X"
+				>
+					<img height="24" width="24" src={x_logo} alt="X" />
+				</a>
+				<a
+					href="https://news.ycombinator.com/user?id=Baggie"
+					class="opacity-80 transition hover:opacity-100"
+					aria-label="Hacker News"
+				>
+					<img height="24" width="24" src={yc_logo} alt="Hacker News" />
+				</a>
 			</div>
 
-			<div>
-				<h2 class="mb-3 text-lg font-bold uppercase tracking-wide text-blue-950">Projects</h2>
-				<ul class="space-y-3">
-					{#each featuredProjects as project}
-						<li class="group">
-							<a class="block" href={project.url} target="_blank" rel="noopener noreferrer">
-								<div class="flex items-baseline gap-2">
-									<h3
-										class="text-sm font-semibold text-secondary transition group-hover:text-primary"
-									>
-										{project.name}
-									</h3>
-									<span class="text-xs text-secondary/40">{project.tags[0]}</span>
-								</div>
-								<p class="text-xs text-secondary/60">{project.description}</p>
+			<fieldset class="win-fieldset">
+				<legend>What I do</legend>
+				<p>
+					I currently work on <strong>cool shit</strong> with emphasis on making real products, no wordcel
+					filler slop. My work ethic is super pragmatic.
+				</p>
+				<p class="dim mt-2">Focus areas:</p>
+				<ul class="mt-1 space-y-0.5">
+					<li>· End to end product engineering, design and delivery (6+ yoe)</li>
+					<li>· Lean hardware design &amp; manufacturing</li>
+					<li>· Collecting copper and aluminium to melt into bars</li>
+					<li>· Getting my 1992 carburated lancer to start in the morning</li>
+				</ul>
+			</fieldset>
+
+			<p class="mt-3">
+				Based in Tehran. Open to meeting other makers—<a
+					class="link"
+					href="https://www.linkedin.com/in/manisohi/">get in touch</a
+				>.
+			</p>
+		</Window>
+	</div>
+
+	<aside class="flex min-w-0 flex-col gap-3">
+		<Window title="Writing">
+			{#if posts.length === 0}
+				<p class="dim">No posts yet.</p>
+			{:else}
+				<ul class="space-y-1.5">
+					{#each posts as post}
+						<li>
+							<a class="win-item group" href={`/blog/${post.slug}`}>
+								<h3 class="text-[12px] font-bold">{post.title}</h3>
+								<p class="dim mt-0.5 text-[11px]">{post.description}</p>
 							</a>
 						</li>
 					{/each}
 				</ul>
-				<a
-					href="/projects"
-					class="mt-4 inline-block text-sm font-semibold text-primary hover:underline"
-					>All projects →</a
-				>
+				<div class="pt-3">
+					<a class="btn" href="/blog">All posts →</a>
+				</div>
+			{/if}
+		</Window>
+
+		<Window title="Projects">
+			<ul class="space-y-1.5">
+				{#each featuredProjects as project}
+					<li>
+						<a class="win-item" href={project.url} target="_blank" rel="noopener noreferrer">
+							<div class="flex items-baseline justify-between gap-2">
+								<h3 class="text-[12px] font-bold">{project.name}</h3>
+								<span class="dim text-[10px]">{project.tags[0]}</span>
+							</div>
+							<p class="dim mt-0.5 text-[11px]">{project.description}</p>
+						</a>
+					</li>
+				{/each}
+			</ul>
+			<div class="pt-3">
+				<a class="btn" href="/projects">All projects →</a>
 			</div>
-		</aside>
-	</div>
+		</Window>
+	</aside>
 </div>

@@ -1,9 +1,10 @@
 <script lang="ts">
-    import type { LayoutData } from './$types';
-
-    export let data: LayoutData;
+	import Window from '$lib/components/Window.svelte';
 </script>
 
-<h1 class="mb-2 text-4xl font-extrabold tracking-tight text-primary">Projects</h1>
-<p class="mb-8 text-secondary/60">Things I've built and hacked on.</p>
-<slot />
+<h1 class="sr-only">Projects</h1>
+
+<Window title="Projects">
+	<p class="mb-4">Things I've built and hacked on.</p>
+	<slot />
+</Window>

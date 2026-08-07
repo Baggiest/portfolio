@@ -1,10 +1,10 @@
 export type Project = {
-	name: string
-	description: string
-	url: string
-	tags: string[]
-	featured?: boolean
-}
+	name: string;
+	description: string;
+	url: string;
+	tags: string[];
+	featured?: boolean;
+};
 
 export const projects: Project[] = [
 	{
@@ -23,7 +23,8 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'pelak',
-		description: 'Viral meme project people in Iran use to find which city any car comes from so they can judge them',
+		description:
+			'Viral meme project people in Iran use to find which city any car comes from so they can judge them',
 		url: 'pelak.vercel.app',
 		tags: ['TypeScript'],
 		featured: true
@@ -67,8 +68,8 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'Luhn-algorithm',
-		description: 'Implementing Luhn\'s algorithm in Zig in 3 languages and ranking the speed',
+		description: "Implementing Luhn's algorithm in Zig in 3 languages and ranking the speed",
 		url: 'https://github.com/Baggiest/Luhn-algorithm',
-		tags: ['Go','Zig','Deno']
+		tags: ['Go', 'Zig', 'Deno']
 	}
-]
+];

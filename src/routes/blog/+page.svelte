@@ -1,26 +1,32 @@
 <script lang="ts">
-  export let data: { posts: Array<{ title: string; slug: string; description: string; date: string }> };
-  const { posts } = data;
+	import Window from '$lib/components/Window.svelte';
+
+	export let data: {
+		posts: Array<{ title: string; slug: string; description: string; date: string }>;
+	};
+	const { posts } = data;
+
+	const formatDate = (d: string) => new Date(d).toLocaleDateString();
 </script>
 
+<h1 class="sr-only">Blog</h1>
 
-<h1 class="mb-2 text-4xl font-extrabold tracking-tight text-primary">Blog</h1>
-<p class="mb-8 text-secondary/60">Thoughts, Tryings and Failings.</p>
-
-{#if posts.length === 0}
-  <p>No posts yet.</p>
-{:else}
-  <ul class="space-y-2">
-    {#each posts as post}
-      <li class="border-l-4 border-secondary/30 pl-4 py-3 transition hover:border-primary hover:bg-[#ddd9cd]/50">
-        <a class="block" href={`/blog/${post.slug}`}>
-          <div class="flex justify-between gap-2 items-baseline">
-            <h2 class="text-lg font-semibold text-secondary">{post.title}</h2>
-            <span class="shrink-0 text-xs text-secondary/50">{new Date(post.date).toLocaleDateString()}</span>
-          </div>
-          <p class="mt-1 text-sm text-secondary/70">{post.description}</p>
-        </a>
-      </li>
-    {/each}
-  </ul>
-{/if}
+<Window title="Blog — Thoughts, Tryings and Failings">
+	{#if posts.length === 0}
+		<p class="dim">No posts yet.</p>
+	{:else}
+		<ul class="space-y-1.5">
+			{#each posts as post}
+				<li>
+					<a class="win-item" href={`/blog/${post.slug}`}>
+						<div class="flex items-baseline justify-between gap-2">
+							<h2 class="truncate text-[13px] font-bold">{post.title}</h2>
+							<span class="dim shrink-0 text-[10px]">{formatDate(post.date)}</span>
+						</div>
+						<p class="dim mt-0.5 text-[11px]">{post.description}</p>
+					</a>
+				</li>
+			{/each}
+		</ul>
+	{/if}
+</Window>
