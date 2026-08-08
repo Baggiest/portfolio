@@ -46,7 +46,7 @@
 			<p class="mt-2">
 				I'm a <span class="font-bold tabular-nums">{format(wholeMinutes)}</span><span
 					class="text-[#000080]">.{String(fractional).padStart(2, '0')}</span
-				> minutes old product engineer and former mechanic.
+				> minutes old maker & engineer.
 			</p>
 
 			<div class="mt-4 flex flex-wrap items-center gap-4">
@@ -83,15 +83,15 @@
 			<fieldset class="win-fieldset">
 				<legend>What I do</legend>
 				<p>
-					I currently work on <strong>cool shit</strong> with emphasis on making real products, no wordcel
-					filler slop. My work ethic is super pragmatic.
+					I'm currently the <strong>Team Captain</strong> and Engineer at University of Tehran's Formula Student team (UT NACIONAL)
+					<br>Born a shape-rotator I love making things I need or my community needs.
 				</p>
 				<p class="dim mt-2">Focus areas:</p>
 				<ul class="mt-1 space-y-0.5">
 					<li>· End to end product engineering, design and delivery (6+ yoe)</li>
 					<li>· Lean hardware design &amp; manufacturing</li>
-					<li>· Collecting copper and aluminium to melt into bars</li>
-					<li>· Getting my 1992 carburated lancer to start in the morning</li>
+					<li>· I don't mind being paid with Copper or aluminium</li>
+					<li>· If you have a problem with your 1993 Mitsubishi Lancer HMU</li>
 				</ul>
 			</fieldset>
 

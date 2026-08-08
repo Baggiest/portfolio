@@ -13,7 +13,7 @@ while dipshits cut the fucking internet for 2 weeks
 not only internet but EVERY form of communication even SMS and GSM
 
 I was nearly shot maybe 7 times
-the teargas probably had some unknown neurotoxin that fucked up my lung irreversibly, i developed some kinda asthma ever since that day
+the tear gas probably had some unknown neurotoxin that fucked up my lung irreversibly, i developed some kinda asthma ever since that day
 
 now I'm working on the system and I see it
 there needs to be a tree structure with one spine with one end being the user and the other being the LLM
